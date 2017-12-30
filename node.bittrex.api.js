@@ -106,8 +106,7 @@ const NodeBittrexApi = function() {
 
   var sendRequestCallback = function(callback, op) {
     var start = Date.now();
-    console.log(op.uri);
-    fetch(op.uri)
+    fetch(op.uri, op)
       .then((response) => response.json())
       .then((result) => {
         ((opts.verbose) ? console.log("requested from " + op.uri + " in: %ds", (Date.now() - start) / 1000) : '');
@@ -120,6 +119,8 @@ const NodeBittrexApi = function() {
           return ((opts.inverse_callback_arguments) ?
             callback(null, ((opts.cleartext) ? JSON.stringify(result) : result)) :
             callback(((opts.cleartext) ? JSON.stringify(result) : result), null));
+      }).catch(err => {
+        console.error('error in react-node.bittrex.api module', err);
       });
   };
 
