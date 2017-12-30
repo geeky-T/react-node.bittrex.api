@@ -1,0 +1,38 @@
+{
+  "name": "react-node.bittrex.api",
+  "version": "0.0.1",
+  "description": "React Bittrex API - asynchronous react.js library for the Bittrex API https://bittrex.com/ using fetch",
+  "keywords": [
+    "btc",
+    "xbt",
+    "bitcoin",
+    "altcoin",
+    "bittrex"
+  ],
+  "author": "Tirth Patel ( https://github.com/geeky-T )",
+  "contributors": [],
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geeky-T/react-node.bittrex.api"
+  },
+  "main": "node.bittrex.api.js",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "bugs": {
+    "url": "https://github.com/geeky-T/react-node.bittrex.api/issues",
+    "email": "pateltirth001@gmail.com"
+  },
+  "homepage": "https://github.com/geeky-T/react-node.bittrex.api",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  }
+}
