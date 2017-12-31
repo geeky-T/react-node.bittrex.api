@@ -1,6 +1,6 @@
 {
   "name": "react-node.bittrex.api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Bittrex API - asynchronous react.js library for the Bittrex API https://bittrex.com/ using fetch",
   "keywords": [
     "btc",
