@@ -106,7 +106,12 @@ const NodeBittrexApi = function() {
 
   var sendRequestCallback = function(callback, op) {
     var start = Date.now();
-    fetch(op.uri, op)
+    var myInit = { method: 'GET',
+               mode: 'cors',
+               cache: 'default' };
+    let request = new Request(op.uri, op);
+    request = new Request(request, myInit);
+    fetch(request)
       .then((response) => response.json())
       .then((result) => {
         ((opts.verbose) ? console.log("requested from " + op.uri + " in: %ds", (Date.now() - start) / 1000) : '');
